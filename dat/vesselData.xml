@@ -1,4 +1,4 @@
-<!-- vessel_data is the big wrapper for all the vessel objects -->
+﻿<!-- vessel_data is the big wrapper for all the vessel objects -->
 <!-- TSN Mod Version 2.01 -->
 <!--
 2.0 (X = Xavier)
@@ -55,7 +55,19 @@ Matsiyan:
 Xavier:
 - Removed Rumarian Race.
 - Reassigned Ximni to 7500 - 7599 vessel Unique IDs
-- Removed reference to "player" in hit points, and torpedo stores for Ximni ships; set additional drone ports on Ximni ships; 
+- Removed reference to "player" in hit points, and torpedo stores for Ximni ships; set additional drone ports on Ximni ships;
+2.010
+Xavier:
+- USFP Sensor Relay name switched to USFP Sensor Buoy
+- Added: Hegemony Comms Relay; Sensor Buoy
+Matsiyan
+- Fixed torpedo type bug with Hull-ID 200 (TSN Fighter)
+2.011 (proposed)
+Rakaydos
+- Artemis class ShipEffiency and WarpEfficency to Fleet Standard (1.0 ship effencency to 0.6, 1.0 Warp efficency to 0.3)
+- Scout class ShipEfficency and WarpEfficentcy set the same % better than Fleet Standard that the Stock scout was better than Stock Artemis (0.7 ShipEfficency to 0.42, 0.7 WarpEfficency to 0.21)
+- Scout class Beam Damage dropped from 3 to 2, Cycle time changed from 6 to 4.
+- Orion class Disruptor Scout added to Mod Ships (Same efficencies as the scout, 3/6 main beam, Disrupter beam, and thinner internals file.)
 -->
 
 <vessel_data version="2.6">
@@ -188,7 +200,7 @@ Xavier:
     <internal_data file="dat/artemis.snt"/>
 	<!-- Weapons and Shields modified (1/4)-->
     <shields front="20" back="20"/>
-	<!--<performance turnrate="0.004" topspeed="0.6" shipefficiency="1.0" warpefficiency="1.0" jumpefficiency="1.0"/>-->
+	<!--<performance turnrate="0.004" topspeed="0.6" shipefficiency=".6" warpefficiency=".3" jumpefficiency="1.0"/>-->
     <performance turnrate="0.004" topspeed="0.6" shipefficiency="0.6" warpefficiency="0.3" jumpefficiency="1.0"/>
     <beam_port x="-102.14" y="8.35" z="258.74" damage="0.25" playerdamage="3" arcwidth="0.4" cycletime="6.0" range="1000"/>
     <beam_port x=" 102.14" y="8.35" z="258.74" damage="0.25" playerdamage="3" arcwidth="0.4" cycletime="6.0" range="1000"/>
@@ -215,8 +227,8 @@ Xavier:
     <internal_data file="dat/artemis-scout.snt"/>
 	<!-- Weapons and Shields modified (1/4)-->
     <shields front="15" back="15"/>
-    <performance turnrate="0.006" topspeed="0.8"  shipefficiency="0.7" warpefficiency="0.7" jumpefficiency="1.0"/>
-    <beam_port x="0" y="17.8" z="289.0" damage="0.25" playerdamage="3" arcwidth="0.4" cycletime="6.0" range="1000"/>
+    <performance turnrate="0.006" topspeed="0.8"  shipefficiency="0.42" warpefficiency="0.21" jumpefficiency="1.0"/>
+    <beam_port x="0" y="17.8" z="289.0" damage="0.25" playerdamage="2" arcwidth="0.4" cycletime="4.0" range="1000"/>
     <torpedo_tube x="0" y="8.35" z="258.74"/>
     <torpedo_storage type="trp" amount="6"/>  <!-- Homing"-->
     <torpedo_storage type="nuk" amount="0"/>  <!-- LR Nuke-->
@@ -725,14 +737,15 @@ Xavier:
 	<!-- Weapons and Shields modified (1/4)-->
     <shields front="20" back="20" />
     <performance turnrate="0.004" topspeed="0.6" shipefficiency="0.6" warpefficiency="0.3" jumpefficiency="1.0" />
+    <carrierload baycount="4"/>
     <beam_port x="-102.14" y="8.35" z="258.74" damage="0.25" playerdamage="2.25" arcwidth="0.4" cycletime="6.0" range="1000" />
     <beam_port x=" 102.14" y="8.35" z="258.74" damage="0.25" playerdamage="2.25" arcwidth="0.4" cycletime="6.0" range="1000" />
     <torpedo_tube x="0" y="8.35" z="258.74" />
-	<torpedo_storage type="trp" amount="12"/>  <!-- Homing"-->
+	<torpedo_storage type="trp" amount="10"/>  <!-- Homing"-->
     <torpedo_storage type="nuk" amount="1"/>  <!-- LR Nuke-->
     <torpedo_storage type="min" amount="1"/>  <!-- Mine"-->
     <torpedo_storage type="emp" amount="10"/>  <!-- EMP"-->
-    <torpedo_storage type="shk" amount="12"/>  <!-- Plasma Shock"-->
+    <torpedo_storage type="shk" amount="6"/>  <!-- Plasma Shock"-->
     <torpedo_storage type="bea" amount="2"/>  <!-- Beacon"-->
     <torpedo_storage type="pro" amount="4"/>  <!-- Probe"-->
     <torpedo_storage type="tag" amount="1"/>  <!-- Tag"-->
@@ -741,7 +754,7 @@ Xavier:
     <engine_port x="0" y="-9.22" z="-280" />
     <engine_port x="0" y="29.64" z="-300" />
     <engine_port x="0" y="69.64" z="-260" />
-    <long_desc text="Chimera Class Light Carrier^Designed as a close support carrier, the Chimera is equipped with multiple fighter drones. ^2 Standard beams, reduced intensity.^1 Torpedo tube^Stores for 12 Homing, 1 Nukes, 1 Mine, 10 EMP, 12 PShock." />
+    <long_desc text="Chimera Class Light Carrier^Designed as a close support carrier, the Chimera is equipped with three fighter bays. ^2 Standard beams, reduced intensity.^1 Torpedo tube^Stores for 10 Homing, 1 Nukes, 1 Mine, 10 EMP, 6 PShock." />
   </vessel>
 
   <vessel uniqueID="19" side="0" classname="Ares Class" broadType="player">
@@ -779,8 +792,8 @@ Xavier:
 	<!-- Weapons and Shields modified (1/4)-->
     <shields front="18" back="18" />
     <performance turnrate="0.004" topspeed="0.6" shipefficiency="0.6" warpefficiency="0.3" jumpefficiency="1.0" />
-    <beam_port x="-110" y="8.35" z="258.74" damage="0.25" playerdamage="2" arcwidth="0.5" cycletime="6.0" range="1000" />
-    <beam_port x="110" y="8.35" z="258.74" damage="0.25" playerdamage="2" arcwidth="0.5" cycletime="6.0" range="1000" />
+    <beam_port x="-110" y="8.35" z="258.74" damage="0.25" playerdamage="2.8" arcwidth="0.5" cycletime="6.0" range="1000" />
+    <beam_port x="110" y="8.35" z="258.74" damage="0.25" playerdamage="2.8" arcwidth="0.5" cycletime="6.0" range="1000" />
     <torpedo_tube x="0" y="8.35" z="258.74" />
     <torpedo_tube x="0" y="8.35" z="258.74" />
     <torpedo_tube x="0" y="8.35" z="258.74" />
@@ -899,6 +912,29 @@ Xavier:
     <engine_port x="-100" y="20" z="-270"/>
     <engine_port x="100" y="20" z="-270"/>
     <long_desc text="Patrach-Edwards Necessity Class ^experimental field-modified Hjorden system defence vessel ^with TSN propulsion and ordnance adaptations"/>
+  </vessel>
+
+  <vessel    uniqueID="25"    side="0"       classname="Orion Class" broadType="player">
+    <art     meshfile="dat/artemis-scout.dxs"    diffuseFile="dat/artemis_diffuse.png"
+             glowFile="dat/artemis_illum.png"    specularFile="dat/artemis_specular.png" scale="0.2" pushRadius="150"/>
+    <internal_data file="dat/OrionScout.snt"/>
+	<!-- Weapons and Shields modified (1/4)-->
+    <shields front="15" back="15"/>
+    <performance turnrate="0.006" topspeed="0.8"  shipefficiency="0.42" warpefficiency="0.21" jumpefficiency="1.0"/>
+    <beam_port x="0" y="17.8" z="289.0" damage="0.25" playerdamage="3" arcwidth="0.4" cycletime="6.0" range="1000"/>
+    <beam_port x="0" y="17.8" z="289.0" damage="0.25" playerdamage="0" arcwidth="0.05" cycletime="3.0" range="2200"/>
+    <torpedo_tube x="0" y="8.35" z="258.74"/>
+    <torpedo_storage type="trp" amount="6"/>  <!-- Homing"-->
+    <torpedo_storage type="nuk" amount="0"/>  <!-- LR Nuke-->
+    <torpedo_storage type="min" amount="2"/>  <!-- Mine"-->
+    <torpedo_storage type="emp" amount="2"/>  <!-- EMP"-->
+    <torpedo_storage type="shk" amount="1"/>  <!-- Plasma Shock"-->
+    <torpedo_storage type="bea" amount="8"/>  <!-- Beacon"-->
+    <torpedo_storage type="pro" amount="8"/>  <!-- Probe"-->
+    <torpedo_storage type="tag" amount="8"/>  <!-- Tag"-->
+    <engine_port x="0" y="-9.22" z="-300"/>
+    <engine_port x="0" y="29.64" z="-300"/>
+    <long_desc text="Orion Class modified Scout^1 forward beam, 1 Long Range Ionic Disrupter, 1 Torpedo tube^Stores for 6 homing, 2 mines, 2 ECM, 1 PShock.^Simplified internal layout to enhance cruising efficency."/>
   </vessel>
   
   <!-- ****************************** single-seat ships (fighters, bombers, shuttles) 100 - 131 **************************************** -->
@@ -1058,7 +1094,7 @@ Xavier:
     <beam_port x="0" y="0" z="0" damage="0.04" playerdamage="0.5" arcwidth="0.2" cycletime="0.8" range="1200"/>
     <engine_port x="-15.533172" y="-3.027038" z="-50.354633"/>
     <engine_port x=" 15.533172" y="-3.027038" z="-50.354633"/>
-	<torpedo_storage type="0" amount="0"/>
+	<torpedo_storage type="trp" amount="0"/>
 	<!-- Type 1 Homing"-->
     <long_desc text="Superiority Fighter^High-speed fighter armed with a heavy pulse beam."/>
   </vessel>
@@ -1245,7 +1281,7 @@ Xavier:
     <long_desc text="Small shipyard suitable for major repairs, refits and construction of most vessels." />
   </vessel>
   
-   <vessel uniqueID="1054" side="9" classname="Sensor Relay" broadType="static network">
+   <vessel uniqueID="1054" side="9" classname="Sensor Buoy" broadType="static network">
     <art meshfile="dat/TSN/USFP/sensorrelay.dxs" diffuseFile="dat/TSN/USFP/sensorrelay_color.png" glowFile="dat/TSN/USFP/sensorrelay_color.png" specularFile="dat/TSN/USFP/sensorrelay_color.png" scale="0.2" pushRadius="50" />
     <!-- Weapons and Shields modified (1/4)-->
 	<shields front="38" back="38" />
@@ -1329,6 +1365,24 @@ Xavier:
     <beam_port x="90" y="23" z="142" damage="0.25" arcwidth="0.25" cycletime="6.0" range="2500"/>
     <beam_port x="-86" y="23" z="142" damage="0.25" arcwidth="0.25" cycletime="6.0" range="2500"/>
     <long_desc text="Static defence platform armed with 6 beams in a radial formation and a small QRF launch bay."/>
+  </vessel>
+  
+  <vessel uniqueID="1351" side="15" classname="Sensor Buoy" broadType="static network">
+    <art meshfile="dat/TSN/Hegemony/KralienSensorBuoy.dxs" diffuseFile="dat/TSN/Hegemony/KralienSensorBuoy-diffuse.png" glowFile="dat/TSN/Hegemony/KralienSensorBuoy-glow.png" specularFile="dat/TSN/Hegemony/KralienSensorBuoy-spec.png" scale="0.1" pushRadius="50"/>
+    <!-- Weapons and Shields modified (1/4)-->
+	<shields front="50" back="50"/>
+    <performance turnrate="0.0" topspeed="0.0"/>
+	<fleet_ai commonality="1"/>
+    <long_desc text="Sensor buoy used by hegemony forces for various purposes including sensor disruption, signal relay or scanning."/>
+  </vessel>
+  
+  <vessel uniqueID="1352" side="15" classname="Comms Relay" broadType="static network">
+    <art meshfile="dat/TSN/Hegemony/KralienSensorBuoy.dxs" diffuseFile="dat/TSN/Hegemony/KralienCommsRelay-diffuse.png" glowFile="dat/TSN/Hegemony/KralienCommsRelay-glow.png" specularFile="dat/TSN/Hegemony/KralienCommsRelay-spec.png" scale="0.1" pushRadius="50"/>
+    <!-- Weapons and Shields modified (1/4)-->
+	<shields front="50" back="50"/>
+    <performance turnrate="0.0" topspeed="0.0"/>
+	<fleet_ai commonality="1"/>
+    <long_desc text="Comms relay node used by hegemony forces for long range communications."/>
   </vessel>
 
    <!--**Free/Ulikai Bases 1400 - 1450**-->  
