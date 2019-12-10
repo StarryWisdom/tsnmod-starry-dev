@@ -700,6 +700,10 @@
     <torpedo_storage type="tag" amount="8"/>  <!-- Tag"-->
     <engine_port x="0" y="-9.22" z="-300"/>
     <engine_port x="0" y="29.64" z="-300"/>
+    <impulse_point x="0" y="29.64" z="-262.75"/> <!-- UpMid Main -->
+    <impulse_point x="0" y="-9.22" z="-255.4"/> <!-- LowMid Main-->
+    <maneuver_point x="101.48" y="10" z="81"/> <!-- Starboard -->
+    <maneuver_point x="-101.48" y="10" z="81"/> <!-- Port -->
     <long_desc text="TSN Scout, 2239 refit^Long range scout vessel of the TSN.^1 forward beam, networked point defense beam^1 Torpedo tube^Stores for 8 homing, 2 mines, 4 EMPs, 3 PShock."/>
   </vessel>
 
@@ -1486,6 +1490,8 @@
     <fleet_ai commonality="100"/>
     <engine_port x="-51" y="-3.155422" z="26.135927"/>
     <engine_port x=" 51" y="-3.155422" z="26.135927"/>
+    <impulse_point x="-51" y="-3.155422" z="26.135927"/>
+    <impulse_point x=" 51" y="-3.155422" z="26.135927"/>
     <long_desc text="An unarmed, long-range exploration ship. The hull is a Ximni design."/>
   </vessel>
 
