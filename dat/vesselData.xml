@@ -1011,7 +1011,7 @@
     <beam_port x="0" y="0" z="0" damage="0.04" playerdamage="0.5" arcwidth="0.2" cycletime="0.8" range="1200"/>
     <engine_port x="-15.533172" y="-3.027038" z="-50.354633"/>
     <engine_port x=" 15.533172" y="-3.027038" z="-50.354633"/>
-	<torpedo_storage type="0" amount="0"/>
+	<torpedo_storage type="trp" amount="0"/>
 	<!-- Type 1 Homing"-->
     <long_desc text="Superiority Fighter^High-speed fighter armed with a heavy pulse beam."/>
   </vessel>
