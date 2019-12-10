@@ -842,6 +842,8 @@
     <torpedo_storage type="tag" amount="10"/>  <!-- Tag"-->
     <engine_port x="-51" y="-3.155422" z="26.135927"/>
     <engine_port x=" 51" y="-3.155422" z="26.135927"/>
+    <impulse_point x="-51" y="-3.155422" z="26.135927"/>
+    <impulse_point x=" 51" y="-3.155422" z="26.135927"/>
     <long_desc text="Discovery Class Science Vessel^A long-range exploration ship. The hull is a Ximni design.^1 close-range, defensive beam." />
   </vessel>
   
@@ -1503,6 +1505,12 @@
     <engine_port x="63.478695" y="1.709533" z="-240.778183"/>
     <engine_port x="91.280312" y="2.732927" z="-226.381104"/>
     <engine_port x="91.280312" y="2.732927" z="-226.381104"/>
+    <impulse_point x="-36.569798" y="1.519395" z="-261.916901"/>
+    <impulse_point x="36.569798" y="1.519395" z="-261.916901"/>
+    <impulse_point x="-63.478695" y="1.709533" z="-240.778183"/>
+    <impulse_point x="63.478695" y="1.709533" z="-240.778183"/>
+    <maneuver_point x="-91.280312" y="2.732927" z="-226.381104"/>
+    <maneuver_point x="91.280312" y="2.732927" z="-226.381104"/>
     <long_desc text="An unarmed bulk freighter, slowly moving cheap cargo between the stars."/>
   </vessel>
 
@@ -1520,6 +1528,12 @@
     <engine_port x="-38.461231" y="-39.984001" z="-13.113809"/>
     <engine_port x="14.653028" y="-57.441185" z="-13.352610"/>
     <engine_port x="38.461231" y="-39.984001" z="-13.113809"/>
+    <impulse_point x="0.077280" y="11.006388" z="-252.707397"/>
+    <impulse_point x="0.197185" y="31.179333" z="-265.912628"/>
+    <impulse_point x="-14.653028" y="-57.441185" z="-13.352610"/>
+    <impulse_point x="14.653028" y="-57.441185" z="-13.352610"/>
+    <impulse_point x="-38.461231" y="-39.984001" z="-13.113809"/>
+    <impulse_point x="38.461231" y="-39.984001" z="-13.113809"/>
     <long_desc text="An unarmed travelling playground of the rich and powerful."/>
   </vessel>
 
@@ -1581,6 +1595,10 @@
     <engine_port x="0" y="29.64" z="-300"/>
     <engine_port x="84" y="-20.22" z="-250"/>
     <engine_port x="-84" y="-20.22" z="-250"/>
+    <impulse_point x="0" y="-9.22" z="-300"/>
+    <impulse_point x="0" y="29.64" z="-300"/>
+    <maneuver_point x="-84" y="-20.22" z="-250"/>
+    <maneuver_point x="84" y="-20.22" z="-250"/>
     <beam_port x="-82.14" y="8.35" z="230.74" damage="1.8" arcwidth="0.4" cycletime="3.0" range="700"/>
     <beam_port x=" 82.14" y="8.35" z="230.74" damage="1.8" arcwidth="0.4" cycletime="3.0" range="700"/>
     <beam_port x="0" y="8.35" z="-230.74" damage="2.0" arcwidth="0.4" cycletime="3.0" range="700"/>
@@ -1607,6 +1625,8 @@
     <fleet_ai commonality="10"/>
     <engine_port x="0" y="22" z="-246"/>
     <engine_port x="0" y="-35" z="-238"/>
+    <impulse_point x="0" y="22" z="-246"/>
+    <impulse_point x="0" y="-35" z="-238"/>
     <long_desc text="Armoured Supply Ship. Unarmed."/>
   </vessel>
   
@@ -1618,6 +1638,8 @@
     <beam_port x="0" y="0" z="250.0" damage="0.5" arcwidth="0.3" cycletime="6.0" range="1000"/>
     <engine_port x="0" y="22" z="-246"/>
     <engine_port x="0" y="-35" z="-238"/>
+    <impulse_point x="0" y="22" z="-246"/>
+    <impulse_point x="0" y="-35" z="-238"/>
     <long_desc text="Armoured Supply Ship. Fitted with a weak foward beam to disuade pirates."/>
   </vessel>
   
@@ -1639,6 +1661,7 @@
 	<engine_port x="0.023621" y="110.925163" z="346.862885"/>
 	<maneuver_point x="-1.222128" y="122.503403" z="189.080658"/>
 	<maneuver_point x="1.882262" y="122.503403" z="-186.591629"/>
+    <impulse_point x="0.023621" y="110.925163" z="346.862885"/>
     <long_desc text="Small mobile shipyard suitable for major repairs, and refits of most TSN vessels." />
   </vessel>
 
